@@ -4,14 +4,27 @@ body {
   }
 
 nav > img{
-    width: 30%;
-    /* margin: px; */
+    width: 35%;
 }
 nav > i{
-     /* margin: auto 10px; */
     padding: 9px; 
     float: right;
 }
+
+@media only screen and (min-width:700px){
+    nav > img{
+            width: 20%;
+            margin-left: 10px;
+        }
+
+    nav>i{
+            padding: 10px; 
+            float: right;
+            margin-right: 40px;
+          }
+    }
+
+
 .container-1{
     text-align: center;
     background-color: #94bedd;
@@ -49,62 +62,120 @@ nav > i{
  
 
 
+@media only screen and (min-width:700px){
+    .container-1 > p{
+            width: 90%;
+            margin-left: 40px;
+            /* padding: 40px; */
+        }
 
-.div-4{
+    .container-1{
+
+        text-align: center;
+        background-color: #94bedd;
+        color: #070f35;
+        padding: 2rem;
+
+          }
+    }
+
+
+ .div-4{
     text-align:center;
-    color: #fff;
-    background-color:#fff;
+    color:#fff;
+    background-color:white;
     padding: 1rem;
-    max-width: 450px;
-}
+    width: auto;
+} 
 
-.div-4 > H1
+.div-4 >.div-4Content> H1
 {
     color: #021433;
 }
-.div-4 >p
+.div-4 >.div-4Content >p
 {
     color: #021433; font-size: 18px;
 }
 
-.div-4 > button{
-    width: 100%;
+.div-4 > .btn > button{
+    width:305px; 
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     font-size: larger;
     text-align: center;
     color: #ccc;    
-    /* height: 20%; */
+    height: 10%;
+    background-color: #fff;
+    margin: 8px;
 }
-/* .div-4 > img{
-    max-width: 450px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
- */
 
-.div-4 > .div-4img{
+
+.div-4 >.div-gridBox >.div-4img{
     max-width: 450px;
 }
-.div-4 > .div-4img> img{
+.div-4 >.div-gridBox >.div-4img> img{
     width: 100%;
 }
-
-@media only screen and (min-width:700px){
-    .div-4{
-        display: grid;
-        grid-template-columns: auto auto;
-        max-width: initial;    
-    }
-    .div-4>h1{
-        grid-column: 1/3;
-        text-align: center;
-        /* grid-row: 2/3; */
-    }
+.div-4 >.div-gridBox >H1
+{
+    color: #021433;
+}
+.div-4 >.div-gridBox>p
+{
+    color: #021433; font-size: 18px;
 }
 
+@media only screen and (min-width:700px)
+{
+
+    .div-4{
+        text-align:center;
+        color:#fff;
+        background-color:white;
+        padding: 1rem;
+        width: auto;
+    } 
+    
+    .div-4 >.div-4Content> H1
+    {
+    color: #021433;
+    }
+    .div-4 >.div-4Content >p
+    {
+    color: #021433; font-size: 18px;
+    }
+
+    .div-4 {
+       
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .div-4 > .div-gridBox
+        {
+                grid-column-start:2;
+                grid-column-end: 3;
+                grid-row-start:3;
+                grid-row-end: 9;
+        
+        }
+     .div-4 > .div-4Content
+     {
+         grid-column-start: 1;
+         grid-column-end:3;
+     }
+     .div-4 > .btn
+     {  
+         grid-column-start: 1;
+        grid-column-end:2;
+
+     
+        
+     }
+}
+
+ /* STARTING OF NEXT TASK */
 
 .div-5main{
     text-align: center;
@@ -120,10 +191,13 @@ nav > i{
     background-color:#fff;
     /* padding: 1rem; */
     max-width: 450px;
+    /* max-width: 100%; */
+    border-bottom: cyan;
 }
 
 .div-5main > .div-5 > .div-5img{
     max-width: 450px;
+    /* max-width: 100%; */
 }
 .div-5main > .div-5 > .div-5img> img{
     width: 100%;
@@ -138,44 +212,76 @@ nav > i{
 color: #87ceeb;
 text-align: left;
 }
-/* .div-6main > .div-6img {
-    display: inline;
-    position: relative;
-    max-width: 350px;
+
+
+
+
+
+@media only screen and (min-width:700px)
+{
+
+   .div-5main > .div-5{
+        width: 325px;
+        height: 500px;
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+    .div-5main > .div-5 > .div-5img >img{
+        width: 320px;
+        height: 350px;
+    }
+    /* .div-5main > .div-5img > img
+    {
+        width: 100px;
+    }
+     */
+
+
+
+    .div-5main
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 150px 500px 30px 500px 30px;
+    }
+    .div-5main > .div-5Content
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .div-5main > .div-5i
+    {
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .div-5main > .div-5ii
+    {
+        grid-column-start:2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .div-5main > .div-5iii
+    {
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .div-5main > .div-5iv
+    {
+        grid-column-start:2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
 }
 
-.div-6main > .div-6img > img {
-    height: 450px;
-    width: 100%;
-    object-fit: cover;
-}
-.div-6main > .div-6img:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline;
-    content: "";
-    background-image: linear-gradient(to bottom, transparent,rgb(0, 0, 0)99%);
-    background-repeat: no-repeat;
-}
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ /* STARTING OF NEXT TASK */
 
 .div-6 {
     padding: 6%;
@@ -226,28 +332,28 @@ text-align: left;
     left: 7%;
 }
 
-/* 
-.div-7 {
-    padding: 0 5%;
-    font-size: x-large;
-    font-weight: bolder;
+
+@media only screen and (min-width:700px)
+{
+ 
+    .div-6>.div-6srv
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+  
 }
-
- */
-
+ 
 
 
-/* ------------------- */
+
+
+
+
 
 
 .service2 {
-    /* background-color: white;
-    padding: 5px;
-    margin-bottom: 15px;
-    text-align: center;
- */
-
-
+  
     padding: 7%;
     /* font-size: x-large; */
     font-weight: bolder;
@@ -256,8 +362,6 @@ text-align: left;
 
 
 }
-
-
 
 .service2 .cards {
     margin-top: 30px;
@@ -319,6 +423,30 @@ text-align: left;
     background-repeat: no-repeat;
     background-position: 50% 20%;
 }
+
+@media only screen and (min-width:700px)
+{
+ 
+    .service2>.cards
+    {
+        display: grid;
+        grid-template-columns: 35% 35% 35%;
+        margin-left: 60px;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container7{
     padding: 2rem;
