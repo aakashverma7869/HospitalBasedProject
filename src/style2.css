@@ -1,10 +1,13 @@
+h2,h1{
+    font-size: 27px;
+}
 
-body {
-    background-color: white;
-  }
 
 .nav-class >nav > img{
     width: 35%;
+    margin: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 .nav-class > nav > i{
     padding: 9px; 
@@ -24,7 +27,8 @@ body {
     .nav-class > nav>i{
         padding: 10px; 
         float: right;
-        margin-right: 40px;
+        margin-right: 20px;
+        margin-top: 10px;
     }
     
 }                                                                                           
@@ -83,6 +87,7 @@ body {
             width: 10% 
         }
     } 
+
 .SearchClass{
     text-align: center;
     background-color: #94bedd;
@@ -95,10 +100,13 @@ body {
     margin-bottom: 5px;
     justify-content: center;
 }
+.SearchClass > .div > .flex-container>.input-search1{
+width: 228px;
+}
 .SearchClass > .input-search{
     border-style: none;
     height: 2.5rem;
-    width: 255px;
+    width: 275px;
 }
 .SearchClass > button{
     margin-top: 1rem;
@@ -150,6 +158,7 @@ body {
             padding: 4rem;
             background-repeat: no-repeat;
             background-size: cover;
+           
         }
         .SearchClass > .div > .flex-container{
             display: inline-flex;
@@ -175,6 +184,8 @@ body {
         .SearchClass > .input-search
         {
             display: inline;
+            margin-right: -3px;
+            margin-left: -3px;
         }
     }
 
@@ -195,19 +206,36 @@ body {
     color: #021433; font-size: 18px;
 }
 
-.FacilityClass > .btn > button{
-    width:305px; 
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 40px;
-    font-size: larger;
-    text-align: center;
-    color: #ccc;    
-    height: 10%;
-    background-color: #fff;
-    margin: 8px;
+.FacilityClass > .btn{
+display: grid;
+grid-template-columns: 1rem auto;
+
+gap: 30px;
 }
 
+
+.FacilityClass > .btn {
+    width:auto; 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+   height: 90px;
+    font-size: larger;
+    text-align: left;
+    color: #ccc;    
+    margin-left: 70px;    
+    background-color: #fff;
+    margin: 8px;
+    
+}
+.FacilityClass > .btn:hover{
+        box-shadow: 0 0 1rem lightgrey;
+    }
+    
+.FacilityClass > .btn>p{
+    width: 200px;
+    padding: 10px;
+
+}
 
 .FacilityClass >.div-gridBox >.div-4img{
     max-width: 450px;
@@ -226,7 +254,9 @@ body {
 
 @media only screen and (min-width:700px)
 {
-
+    .FacilityClass > .btn {
+        width:310px; 
+    }
     .FacilityClass{
         text-align:center;
         color:#fff;
@@ -273,7 +303,9 @@ body {
 
 @media only screen and (min-width:1000px)
 {
-
+    .FacilityClass > .btn {
+        width:410px; 
+    }
     .FacilityClass{
         text-align:left;
         color:#fff;
@@ -295,6 +327,8 @@ body {
     color: #fff;
     background-color:#070f35;
     padding: 1rem;
+    padding-bottom: 0.5rem;
+    
 }
 
 
@@ -302,10 +336,10 @@ body {
     text-align: left;
     color: #fff;
     background-color:#fff;
-    /* padding: 1rem; */
     max-width: 450px;
-    /* max-width: 100%; */
     border-bottom: cyan;
+    border-style: solid;
+    margin-block-end: 20px;
 }
 
 
@@ -313,9 +347,10 @@ body {
     width: 100%;
 }
 .DoctorClass > .div-5 > p{
-    padding-left: 1.6rem;
-    padding-bottom: 2rem;
+    padding-left: 1.7rem;
+    /* padding-bottom: 2rem; */
     color: #021433;
+    margin-block-end: 1.6em;
     
      max-width: 100%;
 }
@@ -323,13 +358,14 @@ body {
 color: #87ceeb;
 text-align: left;
 padding: 1px;
+margin-bottom: 0px;
 }
 @media only screen and (min-width:700px)
 {
 
    .DoctorClass > .div-5{
         width: 325px;
-        height: 500px;
+        height: 508px;
         margin: 20px;
         margin-bottom: 40px;
     }
@@ -341,12 +377,12 @@ padding: 1px;
     {
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 150px 500px 30px 500px 30px;
+        grid-template-rows: 150px 500px 30px 500px 40px;
     }
     .DoctorClass > .div-5Content
     {
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 5;
     }
     .DoctorClass > .div-5i
     {
@@ -441,12 +477,7 @@ padding: 1px;
         grid-row-start: 2;
         grid-row-end: 3 ;
     }
-    .DoctorClass > .div-5Content
-    {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
-
+  
 
 }
  /* STARTING OF NEXT TASK */
@@ -456,6 +487,10 @@ padding: 1px;
     /* font-size: x-large; */
     font-weight: bolder;
     text-align: center ;color: #070f35
+}
+.TreatmentClass > p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .TreatmentClass>.div-6srv {
@@ -477,7 +512,7 @@ padding: 1px;
     bottom: 0;
     left: auto;
     width: 100%;
-    height: 80px;
+    height: 180px;
     content: "";
     z-index: 2;
     background: linear-gradient(to top, black, transparent);
@@ -491,13 +526,18 @@ padding: 1px;
     object-fit: cover;
 }
 
-.TreatmentClass .div-6content {
+.TreatmentClass .div-6content  {
     color: white;
     position: absolute;
     z-index: 2;
     text-align: left;
     bottom: 1%;
     left: 7%;
+ 
+}
+.TreatmentClass .div-6content p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .TreatmentClass > .div-6srv > .div-6vi
@@ -513,6 +553,7 @@ padding: 1px;
         display: grid;
         grid-template-columns: 50% 50%;
     }
+
 }
 
 
@@ -587,8 +628,6 @@ padding: 1px;
     font-weight: bolder;
     text-align: center ;color: #070f35;
     margin-bottom: 15px;
-
-
 }
 
 .ServiceClass .cards {
@@ -661,11 +700,28 @@ padding: 1px;
         grid-template-columns: 35% 35% 35%;
         margin-left: 60px;
     }
-  
+    .ServiceClass .cards .item {
+       
+        width: 80%;
+        }
+    .ServiceClass{
+        margin-right: 100px;
+        margin-top: 0px;
+    
+    }
+    .ServiceClass>.ServiceClassContent{
+        margin-right: 40px;
+        width: 650px;
+    }
+    
+
 }
 
 @media only screen and (min-width:1000px)
 {
+    .ServiceClass{
+        margin-right: auto;
+    }
     .ServiceClass>.cards
     {
         display:flex;
@@ -790,6 +846,8 @@ padding: 1px;
         grid-template-columns: 80% 20%;
         text-align: left;
         grid-template-rows: auto auto;
+        margin-right: 60px;
+        margin-left: 10px;
     }
 
     .footerClass > h2{
@@ -820,12 +878,14 @@ padding: 1px;
         grid-column:2/3;
         grid-row :2/3;
     }
-
-
     .footerClass > .dataii
     {
         display:none;
     }
+    .footerClass > #footer_icon
+{
+    display: inline-block;
+}
 }
 
 
