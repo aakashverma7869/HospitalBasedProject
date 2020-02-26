@@ -5,11 +5,11 @@ function work(id){
     switch (id) {
         case 1:
             allclear();
-            // document.getElementById("box1").style.display="none";
-            document.getElementById("img1").style.display="block";;
+            // document.getElementById("box1").style.border= "black";
+            document.getElementById("img1").style.display="block";
             break;
         case 2:
-             allclear();
+             allclear(); 
             // document.getElementById("box2").style.display="none";
             document.getElementById("img2").style.display="block";
             break;
