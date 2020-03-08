@@ -1,5 +1,6 @@
 window.onload=function(){
     this.document.getElementById("box1").click();
+  
 }
 function work(id){
     switch (id) {
@@ -7,6 +8,7 @@ function work(id){
             allclear();
             // document.getElementById("box1").style.border= "black";
             document.getElementById("img1").style.display="block";
+           
             break;
         case 2:
              allclear(); 
@@ -59,3 +61,6 @@ function allclear() {
     // document.getElementById("box6").style.display="none";
     // document.getElementById("box7").style.display="none";
 }
+function ALERTFunction() {
+    alert("Yet this function is NOT Complete (UNDERCONSTRUCTION)!");
+  }

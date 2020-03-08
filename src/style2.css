@@ -1,10 +1,15 @@
+
+ h1{
+    font-size: 1.9rem;
+} 
 h2{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 1.3rem;
 }
-h1{
-    font-size: 25px;
+h3
+{
+    font-size: 1.5rem;
 }
+
 .nav-class >nav{
     display: flex;
     flex-direction: row;
@@ -15,7 +20,8 @@ h1{
     width: 35%;
     margin: 5px;
     margin-top: 7px;
-    margin-bottom: 7px;
+    margin-bottom: 1rem;
+    margin-left: 0.9rem;
 }
 .nav-class > nav > i{
     padding: 9px; 
@@ -27,18 +33,18 @@ h1{
 }
 
 @media only screen and (min-width:700px){
-    .nav-class > nav > img{
+    .nav-class >nav > img{
         width: 20%;
-        margin-left: 10px;
+        margin: 1rem;
+        margin-bottom: 1rem;
     }
-
-    .nav-class > nav>i{
-        padding: 10px; 
-        float: right;
-        margin-right: 20px;
-        margin-top: 10px;
+    .nav-class > nav > i{
+        margin: 1rem;
     }
     
+    .nav-class > nav > div{
+        display: none;
+    }
 }                                                                                           
     
     @media only screen and (min-width:1000px){
@@ -48,7 +54,6 @@ h1{
             display: flex;
             justify-content: space-between;
             margin-left:40px ;
-            align-items: center;
         }
         .nav-class >nav>i{
             display: none;
@@ -57,7 +62,7 @@ h1{
         {
         display:flex;
         justify-content:space-between;
-        width:40%
+        width:45%
         }
         .nav-class > nav > .nav-classButton
         {
@@ -109,12 +114,12 @@ h1{
     justify-content: center;
 }
 .SearchClass > .div > .flex-container>.input-search1{
-width: 228px;
+width: 18.5rem;
 }
 .SearchClass > .input-search{
     border-style: none;
-    height: 2.5rem;
-    width: 275px;
+    height: 2.44rem;
+    width: 20.5rem;
 }
 .SearchClass > button{
     margin-top: 1rem;
@@ -133,54 +138,26 @@ width: 228px;
 }
 
 @media only screen and (min-width:700px){
-    .SearchClass > p{
-            width: 90%;
-            margin-left: 40px;
-            /* padding: 40px; */
-        }
-
     .SearchClass{
-
-        text-align: center;
-        background-color: #94bedd;
-        color: #070f35;
-        padding: 2rem;
-
-          }
-
-          .SearchClass > .input-search
-          {
-              display: block;
-              margin-right: auto;
-              margin-left: auto;
-          }
-    }
-
-
-
-    @media only screen and (min-width:1000px){
-    
-        .SearchClass{
-            text-align: left;
+            text-align: center;
             background-image:url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg);
             color: #070f35;
-            padding: 4rem;
+            padding: 2rem;
             background-repeat: no-repeat;
             background-size: cover;
            
         }
+        .SearchClass > .div > .flex-container>.input-search1{
+            width: 13.5rem;
+            }
         .SearchClass > .div > .flex-container{
             display: inline-flex;
             height: 2.6rem;
             margin-bottom: 5px;
-            /* flex-wrap: wrap-reverse; */
             justify-content: center;   
         }
         .SearchClass > p{
-            width: 55%;
-            margin-left: 0px;
             color: #021433;
-
         }
         .SearchClass>.div
         {
@@ -195,18 +172,33 @@ width: 228px;
             display: inline;
             margin-right: -3px;
             margin-left: -3px;
+            width: 17rem;
+        }
+
+    }
+
+
+
+    @media only screen and (min-width:1000px){
+    
+        .SearchClass{
+            text-align: left;
+            padding: 4rem;  
+        }
+        .SearchClass > p{
+            width: 55%;
         }
     }
 
- .FacilityClass{
-    text-align:center;
-    color:#fff;
-    background-color:white;
-    padding: 1rem;
-    width: auto;
+    .FacilityClass{
+        text-align:center;
+        /* color:#021433; */
+        background-color:white;
+        padding: 1rem;
+        width: auto;
 } 
 
-.FacilityClass >.div-4Content> H1
+.FacilityClass >.div-4Content> h1
 {
     color: #021433;
 }
@@ -220,6 +212,8 @@ width: 228px;
 display: grid;
 grid-template-columns: 1rem auto;
 gap: 30px;
+padding: 0.1rem;
+padding-left: 1rem;
 }
 
 
@@ -227,44 +221,39 @@ gap: 30px;
     width:auto; 
     border: 2px solid #ccc;
     border-radius: 10px;
-   height: 90px;
+    /* height: 2rem; */
     font-size: larger;
     text-align: left;
     color: #ccc;    
     margin-left: 70px;    
     background-color: #fff;
     margin: 8px;
+    /* padding:0.1rem; */
     
 }
-.FacilityClass > .btn:hover{
-        box-shadow: 0 0 1rem lightgrey;
+
+
+.FacilityClass > .btn:hover {
+        box-shadow: 0 0 2rem lightgrey;
         border-color:darkblue;
-        color: skyblue;
+      
 
     }
-    .FacilityClass > .btn>p:hover{
-    color: darkblue;
+    .FacilityClass > .btn>span>h2:hover{
+       
+        color:skyblue ; 
+    }
+    .FacilityClass > .btn>h2:hover{
+    color: #021433;
     }
     
-.FacilityClass > .btn>p{
-    width: 200px;
-    padding: 10px;
-    font-weight: bold;
-    margin: auto;
-}
-.FacilityClass > .btn>span>p{
-padding: 15px;
-font-weight: bold;
-
-}
-
 .FacilityClass >.div-gridBox >.div-4img{
     max-width: 450px;
 }
 .FacilityClass >.div-gridBox >.div-4img> img{
     width: 100%;
 }
-.FacilityClass >.div-gridBox >H1
+.FacilityClass >.div-gridBox >H2
 {
     color: #021433;
 }
@@ -286,7 +275,7 @@ font-weight: bold;
         width: auto;
     } 
     
-    .FacilityClass >.div-4Content> H1
+    .FacilityClass >.div-4Content> H2
     {
     color: #021433;
     }
@@ -318,27 +307,53 @@ font-weight: bold;
      {  
          grid-column-start: 1;
         grid-column-end:2;
+        height:3.5rem
         
      }
 }
 
 @media only screen and (min-width:1000px)
 {
-    .FacilityClass > .btn {
-        width:410px; 
+    .FacilityClass >.div-4Content{
+        margin-left: 1rem;
     }
+
+    .FacilityClass >.div-4Content> H2
+    {
+    color: #021433;
+    }
+    .FacilityClass >.div-4Content >p
+    {
+    color: #021433; font-size: 18px;
+    }
+
+    .FacilityClass > .btn:hover{
+        border-color:skyblue;
+    }
+    .FacilityClass > .btn {
+        width:358px; 
+        padding:1.5rem;
+        
+    }
+
+  
     .FacilityClass{
         text-align:left;
-        color:#fff;
         background-color:white;
-        padding-left: 4rem;
+        padding-left: 2rem;
         width: auto;
+        padding:3rem
     } 
 
-    .div-gridBox > H1 .div-gridBox> p
+    .FacilityClass > .div-gridBox > H2
     {
         text-align: center;
     }
+    .FacilityClass > .div-gridBox > p
+    {
+        text-align: center;
+    }
+   
     
 }
  /* STARTING OF NEXT TASK */
@@ -349,10 +364,14 @@ font-weight: bold;
     background-color:#070f35;
     padding: 1rem;
     padding-bottom: 0.5rem;
-    
+    margin-bottom: 2rem;
 }
 
-
+.arrow
+{
+    position: relative;
+    top: -9px;
+}
 .DoctorClass > .div-5{
     text-align: left;
     color: #fff;
@@ -361,6 +380,7 @@ font-weight: bold;
     border-bottom: cyan;
     border-style: solid;
     margin-block-end: 20px;
+    padding-bottom: 1rem;
 }
 .DoctorClass > .div-5 >.doctor-image{
     height:325px ;
@@ -369,39 +389,42 @@ font-weight: bold;
 .DoctorClass > .div-5 >.doctor-image >img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .DoctorClass > .div-5 > p{
-    padding-left: 1.7rem;
+    padding-left: 1.8rem;
     /* padding-bottom: 2rem; */
     color: #021433;
-    margin-block-end: 1.6em;
-    
+    /* margin-block-end: 1.6em; */
+    margin: 0px;
      max-width: 100%;
 }
-.DoctorClass > .div-5 > H1{
-color: #87ceeb;
+.DoctorClass > .div-5 > H2{
+color: #0099ff;
 text-align: left;
 padding: 1px;
 margin-bottom: 0px;
 }
 @media only screen and (min-width:700px)
 {
-    .DoctorClass > .div-5 > H1{
+    .DoctorClass > .div-5 > H3{
     margin-top: 35px;
     }
 
    .DoctorClass > .div-5{
         width: 325px;
-        height: 500px;
+        height: 478px;
         margin: 20px;
         margin-bottom: 40px;
     }
     .DoctorClass > .div-5 >.doctor-image> img{
-        max-width: 320px;
-        height: 350px;
+        /* max-width: 320px; */
+        height: 371px;
     }
     .DoctorClass > .div-5 >.doctor-image{
-        width:100%
+        width:100%;
+        margin-bottom: 3.5rem;
+        
         
     }
     .DoctorClass
@@ -409,6 +432,8 @@ margin-bottom: 0px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 150px 500px 30px 500px 40px;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
     }
     .DoctorClass > .div-5Content
     {
@@ -453,18 +478,27 @@ margin-bottom: 0px;
     .DoctorClass
     {
         height: 725px;
+        background-color: #00001a;
+        padding-left: 70px;
+        padding-right: 70px;
+        margin-bottom: 0rem;
+       
+    }
+    .DoctorClass > .div-5 >.doctor-image> img{
+        max-width: 320px;
+        height: 280px;
+    }
+    .DoctorClass > .div-5 >.doctor-image{
+        width:100%;
+        margin-bottom: 0rem;
+        height:auto
     }
     .DoctorClass > .div-5{
         width: auto;
-        height: 500px;
-        margin: 10px;
-        margin-bottom: 40px;
+        height: 420px;
+        margin: 3px;
     }
-    .DoctorClass > .div-5 > .div-5img >img{
-        width: 280px;
-        height: 350px;
-    }
-
+ 
 
     .DoctorClass
     {
@@ -472,6 +506,16 @@ margin-bottom: 0px;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: auto;
 
+    }
+    .DoctorClass > .div-5Content> h3
+    {
+        text-align: left;
+        /* padding-left: 30px ; */
+        font-size: 2rem;
+    }
+    .DoctorClass > .div-5Content> p{
+        text-align: left;
+        /* padding-left: 30px ; */
     }
 
     .DoctorClass > .div-5i
@@ -508,13 +552,29 @@ margin-bottom: 0px;
         grid-row-start: 2;
         grid-row-end: 3 ;
     }
+    .DoctorClass >.round-buttons>.rbtn{
+        height: 9px;
+        width: 10px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right:0.4rem;
+      
+    }
+    .DoctorClass >.round-buttons>.btn4r{
+        margin-right: 6rem;
+    }
+    .DoctorClass >.round-buttons>.btn1r{
+        background-color: blue;
+    
+    }
   
 
 }
  /* STARTING OF NEXT TASK */
 
 .TreatmentClass {
-    padding: 6%;
+    /* padding: 6%; */
     /* font-size: x-large; */
     font-weight: bolder;
     text-align: center ;color: #070f35
@@ -530,6 +590,7 @@ margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .TreatmentClass .div-6card {
@@ -546,12 +607,12 @@ margin-bottom: 0px;
     height: 180px;
     content: "";
     z-index: 2;
-    background: linear-gradient(to top, black, transparent);
+    background: linear-gradient(to top, #00001a , transparent);
 }
 
 .TreatmentClass .div-6card img {
     width: 100%;
-    height: 100%;
+    height: 20rem;
     max-width: auto;
     z-index: 1;
     object-fit: cover;
@@ -564,12 +625,23 @@ margin-bottom: 0px;
     text-align: left;
     bottom: 1%;
     left: 7%;
+    margin-bottom: 1rem;
  
 }
 .TreatmentClass .div-6content p{
     margin-block-start: 0em;
     margin-block-end: 0em;
+    font-size:1.2rem;
+    margin-bottom: 0.5rem;
 }
+.TreatmentClass .div-6content p1{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size:0.9rem;
+    font-family: LightFont;
+    margin-bottom: 2rem;
+}
+
 
 .TreatmentClass > .div-6srv > .div-6vi
 {
@@ -590,6 +662,17 @@ margin-bottom: 0px;
 
 @media only screen and (min-width:1000px)
 {    
+    .TreatmentClass .div-6card img {
+
+        width: 100%;
+        height: 100%;
+        max-width: auto;
+        z-index: 1;
+        object-fit: cover;
+    }
+    .TreatmentClass {
+         padding: 6%; 
+    }
     .TreatmentClass > .div-6data
     {
         text-align: left;
@@ -647,17 +730,31 @@ margin-bottom: 0px;
         grid-column:1/4;
         grid-row :4/11;
     }
- 
-
-  
+    .TreatmentClass>.round-buttons>.rbtn{
+        height: 9px;
+        width: 10px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right:0.4rem;
+        margin-top: 1rem;
+      
+    }
+    .TreatmentClass>.round-buttons>.btn3r{
+        margin-right: 52rem;
+    }
+    .TreatmentClass>.round-buttons>.btn1r{
+        background-color: blue;
+    
+    }
 }
 
 .ServiceClass {
-  
-    padding: 7%;
+    padding: 2%;
+    padding-bottom: 2rem;
     font-weight: bolder;
     text-align: center ;color: #070f35;
-   
+    background-color: #f2f2f2;
 }
 
 .ServiceClass .cards {
@@ -676,14 +773,17 @@ margin-bottom: 0px;
 .ServiceClass >.cards>.item> p{
  margin-top: 50px;
  margin-bottom: 10px;
+ font-family: BoldFont;
 }
 .ServiceClass .cards .item {
     padding: 0px 5px;
-    background-color: #DDDDDD;
+    padding-left: 11px;
+    padding-right: 11px;
+    background-color: #fff;
     height: 135px;
     width: 40%;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 22px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -728,23 +828,25 @@ margin-bottom: 0px;
 @media only screen and (min-width:700px)
 {
  
+    
     .ServiceClass>.cards
     {
         display: grid;
         grid-template-columns: 35% 35% 35%;
         margin-left: 60px;
+       
     }
     .ServiceClass .cards .item {
        
         width: 80%;
         }
     .ServiceClass{
-        margin-right: 100px;
+     
         margin-top: 0px;
-    
+        padding-right: 6rem;
     }
     .ServiceClass>.ServiceClassContent{
-        margin-right: 40px;
+        margin-left: 40px;
         width: 650px;
     }
     
@@ -753,187 +855,34 @@ margin-bottom: 0px;
 
 @media only screen and (min-width:1000px)
 {
+    .ServiceClass>.ServiceClassContent{
+        margin-left: 2rem;
+        width: 900px;
+    }
     .ServiceClass{
         margin-right: auto;
+        padding-right: 0px;
     }
     .ServiceClass>.cards
     {
         display:flex;
-        margin-left: 0px;
+        margin-left: 1.5rem;
         justify-content: flex-start;
         align-items: center;  
     }
 
     .ServiceClass .cards .item {
         background-color: #fff;
-        width: 14%;
+        width: 13%;
         height: 150px;
-        margin-right: 10px;
+        margin-right: 3px;
         border-radius: 5px;
     
     }
     .ServiceClass{
-        background-color: gainsboro;
+        background-color: #f2f2f2;
         text-align: left;
     }
     
   
-}
-/* -------------QUERY CLASSS--------------- */
-
-.HelpClass{
-    padding: 2rem;
-    background-color: #8fcaf1;
-    text-align: center;
-}
-.HelpClass > button{
-    background-color: #0099ff;
-    width : 15rem;
-    height : 4rem;
-    border: 0;
-    border-radius: 9px;
-    font-size: 19px;
-    color: #fff;
-}  
-
-.HelpClass > h2{
-    color: #fff;
-}
-@media only screen and (min-width:1000px)
-{
-
-   .HelpClass
-   {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    text-align: left;
-    
-    grid-template-rows: auto auto;
-   }
-   .HelpClass> h2
-   {
-    margin-left: 40px;        
-    grid-column:1/2;
-    grid-row :1/2;
-   }
-   .HelpClass> p
-   {
-     margin-left: 40px;   
-    grid-column:1/2;
-    grid-row :2/3;
-   }
-   .HelpClass> button
-   {
-    margin-top: auto;
-    margin-bottom: auto;    
-    grid-column:2/3;
-    grid-row :1/3;
-   }
-
-
-}
-
-        /* -------------FOOTER CLASS------------------------------ */
-.footerClass{
-    padding: 1rem;
-    background-color: #021433;
-    color: #fff;
-    text-align: center;
-}
-.footerClass >h2{
-    color: white;
-    font-family:unset;
-    font-weight: normal;
-}
-.footerClass .p{
-    color:#cccccc;
-    font-size:20px;
-}
-.footerClass .footer{
-    color: #636668;
-    font-size: 12px;
-}
-
-.footerClass .button{
-    background-color: #0099ff;
-    width : 15rem;
-    height : 4rem;
-    border: 0;
-
-}
-
-.footerClass > .container8data
-{
-    display:block;
-
-}
-.footerClass > #footer_icon
-{
-    display: none;
-}
-@media only screen and (min-width:700px)
-{
-    .footerClass{
-        padding: 1rem;
-        background-color: white;
-        color: black;
-        margin-left: 50px;
-        display: grid;
-        grid-template-columns: 80% 20%;
-        text-align: left;
-        grid-template-rows: auto auto;
-        margin-right: 60px;
-        margin-left: 10px;
-    }
-
-    .footerClass > h2{
-        display: none;
-    }
-    
-    .footerClass > .datai{
-
-        display: flex;
-        align-items: flex-start;
-        grid-column:1/2;
-        grid-row :1/2;
-    }
-    .footerClass > .datai > p{
-        margin-right: 1rem;
-    }
-    .footerClass > img
-    {
-        grid-column: 2/3;
-        grid-row : 1/2;
-    }
-    .footerClass > footer{
-        grid-column:1/2;
-        grid-row :2/3;
-    }
-    .footerClass > #footer_icon
-    {
-        grid-column:2/3;
-        grid-row :2/3;
-    }
-    .footerClass > .dataii
-    {
-        display:none;
-    }
-    .footerClass > #footer_icon
-{
-    display: inline-block;
-}
-}
-
-
-@media only screen and (min-width:1000px)
-{
-    .footerClass > h2{
-        display: none;
-    }
-    
-   .footerClass > .dataii
-    {
-        display:none;
-    }
-    
 }
