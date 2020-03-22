@@ -1,43 +1,12 @@
   
-    .nav-class >nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }
-    
-    .nav-class >nav > img{
-    width: 35%;
-    margin: 5px;
-    margin-top: 7px;
-    margin-bottom: 1rem;
-    margin-left: 0.9rem;
-    }
-    .nav-class > nav > i{
-    padding: 9px; 
-    font-size: 18px;
-    }
-    
-    .nav-class > nav > div{
-    display: none;
-    }
+
     .poster
     {
         display: none;
     }
     
     @media only screen and (min-width:700px){
-    .nav-class >nav > img{
-    width: 20%;
-    margin: 1rem;
-    margin-bottom: 1rem;
-    }
-    .nav-class > nav > i{
-    margin: 1rem;
-    }
-    
-    .nav-class > nav > div{
-    display: none;
-    }
+
     .poster
     {
         display: none;
@@ -54,57 +23,7 @@
         {
             display: inline-block;
         }
-    .nav-class >nav
-    {
-    display: flex;
-    justify-content: space-between;
-    margin-left:40px ;
-    }
-    .nav-class >nav>i{
-    display: none;
-    }
-    .nav-class > nav > .nav-classContent
-    {
-    display:flex;
-    justify-content:space-between;
-    width:45%;
-    margin-top: 0.4rem;
-    }
-    .nav-class > nav > .nav-classButton
-    {
-    display: flex;
-    justify-content: center;
-    
-    }
-    .nav-class > nav > .nav-classButton> .nav-button-white
-    {
-    width:140px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #fff;
-    color: rgba(3, 3, 66, 0.972);
-    border-color: darkblue ;
-    margin: 10px;
-    }
-    .nav-class >nav>.nav-classButton >.nav-button
-    {
-    width:140px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #021433;
-    color: #fff;
-    border-color: darkblue ;
-    margin: 10px;
-    }
-    
-    
-    .nav-class > nav > i{
-    padding: 9px; 
-    float: right;
-    }
-    .nav-class > nav > .logo{
-    width: 10% 
-    }
+  
     } 
     
     .sortingClass{
@@ -195,9 +114,7 @@ top: -9px;
 {
     text-align: center;
 }
- /* h3{
-    font-size: 1.5rem;
-} */
+
 .side-info
 {
     display: none;
@@ -225,7 +142,6 @@ top: -9px;
         
         display: inline-block;
         width: 25rem;
-       
       
     } 
     .side-info > .side-info1

@@ -1,43 +1,11 @@
-  
-    .nav-class >nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        }
-        
-        .nav-class >nav > img{
-        width: 35%;
-        margin: 5px;
-        margin-top: 7px;
-        margin-bottom: 1rem;
-        margin-left: 0.9rem;
-        }
-        .nav-class > nav > i{
-        padding: 9px; 
-        font-size: 18px;
-        }
-        
-        .nav-class > nav > div{
-        display: none;
-        }
+
         .poster
         {
             display: none;
         }
         
         @media only screen and (min-width:700px){
-        .nav-class >nav > img{
-        width: 20%;
-        margin: 1rem;
-        margin-bottom: 1rem;
-        }
-        .nav-class > nav > i{
-        margin: 1rem;
-        }
-        
-        .nav-class > nav > div{
-        display: none;
-        }
+     
         .poster
         {
             display: none;
@@ -50,57 +18,7 @@
         
         @media only screen and (min-width:1000px){
         
-        .nav-class >nav
-        {
-        display: flex;
-        justify-content: space-between;
-        margin-left:40px ;
-        }
-        .nav-class >nav>i{
-        display: none;
-        }
-        .nav-class > nav > .nav-classContent
-        {
-        display:flex;
-        justify-content:space-between;
-        width:45%;
-        margin-top: 0.4rem;
-        }
-        .nav-class > nav > .nav-classButton
-        {
-        display: flex;
-        justify-content: center;
-        
-        }
-        .nav-class > nav > .nav-classButton> .nav-button-white
-        {
-        width:140px;
-        height: 40px;
-        border-radius: 5px;
-        background-color: #fff;
-        color: rgba(3, 3, 66, 0.972);
-        border-color: darkblue ;
-        margin: 10px;
-        }
-        .nav-class >nav>.nav-classButton >.nav-button
-        {
-        width:140px;
-        height: 40px;
-        border-radius: 5px;
-        background-color: #021433;
-        color: #fff;
-        border-color: darkblue ;
-        margin: 10px;
-        }
-        
-        
-        .nav-class > nav > i{
-        padding: 9px; 
-        float: right;
-        }
-        .nav-class > nav > .logo{
-        width: 10% 
-        }
+       
         .poster {
             display: block;
             width: 100%;
@@ -138,9 +56,6 @@
         .poster label a {
             color: inherit;
         }
-    
-
-
 
         } 
         
@@ -157,8 +72,7 @@
             font-size: 1.2rem;
         }
         .sortingClass>button{
-            padding: 10px;
-           
+            padding: 10px;   
             background-color: #e6e6e6;
             border:none;
             margin-right: 1rem;
@@ -278,7 +192,7 @@ margin-right:4px;
         .DoctorClass > .div-5{
             display: grid;
             grid-template-columns: 70% 30%;
-            grid-template-rows:  10% 20rem 20%; 
+            grid-template-rows:  10% 15.5rem 20%; 
             margin-bottom: 0px; 
             height: 22.5rem;
             margin-bottom: 1rem;
@@ -290,6 +204,9 @@ margin-right:4px;
             grid-row-start:1;
             grid-row-end: 2;
            
+        }
+        .DoctorClass > .div-5 > .doctor-img > img {
+        height:101%
         }
        
             .DoctorClass > .div-5 >.doctor-info>.doctor-info1{
