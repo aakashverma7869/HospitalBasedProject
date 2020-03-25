@@ -49,7 +49,7 @@ body {
     padding: 1rem;
     border: none;
     color: #999999;
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     font-size: 0.9rem;
   }
   
@@ -67,7 +67,7 @@ body {
   .container-login .card-box form .button-class button {
     width: 100%;
     padding: 1rem;
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     letter-spacing: 5px;
     color: #ffffff;
     background-color: #2a2d3e;
@@ -89,14 +89,14 @@ body {
   }
   
   .container-login .card-box form .end-class p {
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     font-size: 0.9rem;
     color: #999999;
   }
   
   .container-login .card-box form .end-class a {
     color: #0173b2;
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     font-size: 0.9rem;
     text-decoration: none;
   }
@@ -109,7 +109,7 @@ body {
   
   .footer p {
     color: #000000;
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     font-size: 0.9rem;
   }
   
