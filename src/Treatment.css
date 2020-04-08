@@ -75,13 +75,14 @@
 .dentist-inf
 {
     margin: 0.7rem;
+    margin-top: 3.5rem;
 }
 .dentist-inf > h2
 {
     margin:1rem;
     margin-left: 0rem;
     font-size: 1.2rem; 
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 .dentist-inf > ul > li
 {
@@ -101,11 +102,30 @@ margin: 1rem;
 padding: 1rem;
 }
 
+@media only screen and (min-width:700px)
+{
+    .data-inf
+    {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        padding-top: 0rem;
+    }
+    .dentist-inf
+    {
+        margin-top: 2.7rem;
+    }
+    .data-inf >.dentist-treatment-image>.dentist-data>h1
+    {
+        text-align: left;
+    }
+}
+
 .treatments
 {
     margin: 1rem;
     text-align: center;
-    padding: rem;
+  
 }
 .treatments ul li h2
 {
@@ -124,6 +144,24 @@ padding: 1rem;
 margin-bottom: 2rem;
 }
 
+
+@media only screen and (min-width:700px)
+{
+    .treatments >ul
+    {
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: row;
+    }
+    .treatments >ul >li
+    {
+        padding: 1.5rem;
+    }
+    .treatments li
+    {
+        margin-bottom: 0rem;
+    }
+}
 
 .service-schedule {
     margin: 1rem;
@@ -182,22 +220,38 @@ margin-bottom: 2rem;
     opacity: 0.4;
 }
 
+@media only screen and (min-width:700px)
+{
+.service-schedule
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 1.5rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
+}
+.service-schedule .common
+{
+    padding: 1.5rem 1rem 2rem 1.5rem;
+    width: 18.2rem;
+}
+}
 
 .container {
 
     background: #9cbfda;   
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     padding: 1.5rem;
   }
 .container > .container-heading
 {
     font-size: 1.8rem;
     color: white;
-    text-align: center;
-
+    /* text-align: center; */
 }
   
   .container .all-card .card-box {
@@ -239,4 +293,46 @@ margin-bottom: 2rem;
     top: 13px;
     color: skyblue;
     font-family:BoldFont;
+}
+@media only screen and (min-width:700px)
+{
+.container
+{
+    padding-bottom: 3.7rem;
+}
+
+    .container .container-heading
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        
+
+    }
+    .container .container-heading .arrows
+    {
+        margin-top: 1rem;
+    }
+
+    .container .all-card
+    {
+            display:grid;
+            grid-template-columns:auto auto auto;
+            width: 100%;
+            margin: 0rem;
+            grid-gap: 0.5rem;
+    }
+    .container .all-card .card-box
+    {
+        width: 14rem;
+    
+    }
+    .container .all-card .card-box .card-img-box img
+  {
+      width: 70%;
+  }
+  .container > .container-heading>.arrows
+  {
+    text-align: right;
+  }
 }
