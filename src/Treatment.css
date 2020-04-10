@@ -251,7 +251,7 @@ margin-bottom: 2rem;
 {
     font-size: 1.8rem;
     color: white;
-    /* text-align: center; */
+    text-align: center;
 }
   
   .container .all-card .card-box {
@@ -324,12 +324,15 @@ margin-bottom: 2rem;
     }
     .container .all-card .card-box
     {
-        width: 14rem;
+        width: 15rem;
     
+    }
+    .container .all-card .card-box .card-img-box {
+    width: 15rem;
     }
     .container .all-card .card-box .card-img-box img
   {
-      width: 70%;
+      width: 100%;
   }
   .container > .container-heading>.arrows
   {
