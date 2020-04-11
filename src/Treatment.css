@@ -339,3 +339,22 @@ margin-bottom: 2rem;
     text-align: right;
   }
 }
+
+
+@media only screen and (min-width:1000px)
+{
+    .service-schedule
+    {
+        padding: 2rem;
+    }
+    .service-schedule .common {
+    width: 33rem;
+    }
+    .container .all-card .card-box 
+    {
+        width: 20rem;
+    }
+    .container .all-card .card-box .card-img-box img {
+    width: 133.5%;
+    }
+}
