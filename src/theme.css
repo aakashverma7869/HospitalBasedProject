@@ -289,11 +289,16 @@ body {
   .footerClass > footer{
   grid-column:1/2;
   grid-row :2/3;
+  font-family: LightFont;
   }
   .footerClass > #footer_icon
   {
   grid-column:2/3;
   grid-row :2/3;
+  }
+  .footerClass > #footer_icon >i
+  {
+    padding: 0.5rem;
   }
   .footerClass > .dataii
   {
@@ -317,6 +322,13 @@ body {
   display: none;
   }
   
+  .footerClass > footer{
+
+    font-family: LightFont;
+    }
+
+
+
   .footerClass > .dataii
   {
   display:none;
