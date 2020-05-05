@@ -316,7 +316,7 @@ body {
   .footerClass
   {
   margin-left: 3rem;
-  margin-right: -1rem;
+  margin-right: 1rem;
   }
   .footerClass > h2{
   display: none;

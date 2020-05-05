@@ -110,7 +110,6 @@
     .FacilityClass >.div-4Content >p
     {
     color: #021433; font-size: 18px;
-    
     }
     
     .FacilityClass > .btn{
@@ -139,16 +138,13 @@
     
     .FacilityClass > .btn:hover {
     box-shadow: 0 0 2rem lightgrey;
-    border-color:darkblue;
-    
-    
+    /* border-color:darkblue; */
     }
     .FacilityClass > .btn>span>h2:hover{
-    
-    color:skyblue ; 
+    /* color:skyblue ;  */
     }
     .FacilityClass > .btn>h2:hover{
-    color: #021433;
+    /* color: #021433; */
     }
     
     .FacilityClass >.div-gridBox >.div-4img{
@@ -797,8 +793,9 @@
     }
     .ServiceClass>.cards
     {
+    max-width: 75rem;
     display:flex;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     justify-content: flex-start;
     align-items: center; 
     }
