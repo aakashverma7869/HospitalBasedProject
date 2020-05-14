@@ -75,7 +75,7 @@ padding: 6rem 2rem;
 .btn-class{
     width: 100%;
     padding: 1rem;
-    font-family: 'Nexa-Bold';
+    font-family: 'BoldFont';
     letter-spacing: 5px;
     color: #ffffff;
     background-color: #2a2d3e;
@@ -102,7 +102,7 @@ padding: 6rem 2rem;
 .about_specialization>h4{
     display: inline-block;
     font-size: 1.4rem;
-    font-family: NexaBold;
+    font-family: BoldFont;
     color: #87ceeb;
     padding-left: 1rem;
 }
