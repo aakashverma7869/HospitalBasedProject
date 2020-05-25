@@ -2,10 +2,7 @@
 let _id = null
 const User = require("../models/user")
 const Nexmo = require('nexmo');
-// const nexmo = new Nexmo({
-//   apiKey: 'ffcdfe5f',
-//   apiSecret: 'sLF7r0ZZsT16B1Sf'
-// });
+
 
 
 
