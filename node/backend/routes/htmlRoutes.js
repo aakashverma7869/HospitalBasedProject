@@ -8,10 +8,12 @@ const postControllers = controller.post
 // router.route("/login").post(postControllers.index);
 // router.route("/").get(getControllers.login);
 router.route("/").get(getControllers.login);
-router.route("/login").post(postControllers.login);
-
-
-
+router.route("/indexPage").post(postControllers.indexPage);
+router.route("/signup").get(getControllers.signup);
+router.route("/signUpUser").post(postControllers.signUpUser);
+router.route("/otp").post(postControllers.otp);
+router.route("/phonenumber").get(getControllers.phonenumber);
+router.route("/check").post(postControllers.check);
 
 
 

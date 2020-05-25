@@ -1,4 +1,5 @@
 const express = require("express");
+const Nexmo = require('nexmo');
 require('dotenv').config()
 const mongoose = require("mongoose");
 const router = express.Router();
@@ -21,9 +22,9 @@ mongoose.connect(process.env.DATABASE,
     });
 
 
-
-
-
+ 
+ //OTP generated
+ 
 
 
 app.use(cookieParser());

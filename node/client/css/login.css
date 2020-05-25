@@ -100,6 +100,27 @@ body {
     font-size: 0.9rem;
     text-decoration: none;
   }
+  .container-login .card-box form .otp-class {
+  
+    display: flex;
+    flex-direction: row;
+    /* align-items: left; */
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 0.5rem;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+  }
+  .container-login .card-box form .otp-class a {
+    color: #0173b2;
+    font-family: 'BoldFont';
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .otp-par
+  {
+    margin-left: 2rem;
+  }
   
   .footer {
     padding: 2rem 1rem;
