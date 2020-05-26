@@ -96,8 +96,17 @@ function ALERTFunction() {
     alert("Yet this function is NOT Complete (UNDERCONSTRUCTION)!");
   }
 
+function showdiv()
+{
+    document.getElementById("alert").style.visibility="visible";
+}
+setTimeout("showdiv()",1000);
 
-
+function hidediv()
+{
+    document.getElementById("alert").style.visibility="hidden";
+}
+setTimeout("hidediv()",5000);
 
 
 

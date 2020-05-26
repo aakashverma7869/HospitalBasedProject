@@ -2,7 +2,7 @@ let index = (req, res) => {
     res.render("index");
 }
 let login = (req, res) => {
-    res.render("LoginPage",{message: "aakash"});
+    res.render("LoginPage");
 }
 let signup = (req, res) => {
     res.render("SignupPage");

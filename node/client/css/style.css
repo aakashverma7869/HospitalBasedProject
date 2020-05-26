@@ -89,10 +89,34 @@
     .SearchClass{
     text-align: left;
     padding: 4rem; 
+    padding-right: 1rem;
     }
     .SearchClass > p{
     width: 55%;
     }
+    #alert {
+        padding: 20px;
+        background-color: green;
+        color: white;
+        width: 17rem;
+        float:right;
+      }
+      
+      #closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      #closebtn:hover {
+        color: black;
+      }
+
     }
     
     .FacilityClass{
@@ -140,12 +164,7 @@
     box-shadow: 0 0 2rem lightgrey;
     /* border-color:darkblue; */
     }
-    .FacilityClass > .btn>span>h2:hover{
-    /* color:skyblue ;  */
-    }
-    .FacilityClass > .btn>h2:hover{
-    /* color: #021433; */
-    }
+ 
     
     .FacilityClass >.div-gridBox >.div-4img{
     max-width: 450px;
@@ -793,7 +812,7 @@
     }
     .ServiceClass>.cards
     {
-    max-width: 75rem;
+    max-width: 74rem;
     display:flex;
     margin-left: 2rem;
     justify-content: flex-start;

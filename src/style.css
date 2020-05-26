@@ -17,6 +17,8 @@
     color: #070f35;
     padding: 1rem;
     }
+
+
     .SearchClass > .div > .flex-container{
     display: flex;
     height: 2.6rem;
@@ -89,7 +91,9 @@
     .SearchClass{
     text-align: left;
     padding: 4rem; 
+   
     }
+
     .SearchClass > p{
     width: 55%;
     }

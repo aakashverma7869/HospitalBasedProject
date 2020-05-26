@@ -1,4 +1,5 @@
 const express = require("express");
+var session = require('express-session')
 const Nexmo = require('nexmo');
 require('dotenv').config()
 const mongoose = require("mongoose");
@@ -23,9 +24,6 @@ mongoose.connect(process.env.DATABASE,
 
 
  
- //OTP generated
- 
-
 
 app.use(cookieParser());
 app.use(cors());
@@ -44,6 +42,25 @@ function home(req, res) {
 }
 router.route("/").get(home);
 */
+
+
+
+//sesssions
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  name: "sid",
+  secret: "KonfinitySecretKey",
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    sameSite: true
+  }
+}));
+
+
+
+
+
 
 
 app.use("/", mainRoutes);
