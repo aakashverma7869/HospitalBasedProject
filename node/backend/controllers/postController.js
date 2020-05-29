@@ -11,20 +11,36 @@ const nexmo = new Nexmo({
 //check or emailid and password if correct render to index page
 
 let indexPage = (req, res) => {
+  console.log("Post request for login");
     const {email,password} = req.body
     User.findOne({ email }, (err, user) => {
         if (err || !user) {
-        res.render("LoginPage");
+   
+          req.session.loginstatus = "Invalid"
+          res.redirect("/");
         }
+        
         else if(user.password==password){
           //check of already session
           if(!req.session.userid)
           {
+            console.log("IF-->");
             //if session is not present make a session for the user
             req.session.userid = user._id;
-            req.session.message = {type:String,msg:"Login Sucessfully index"}
-            res.render("index",{msg:req.session.message});
+            const obje = { 
+              "status":"Successfully",
+              "userName":user.name,
+              "userPhone":user.phone
+             }
+
+             console.log("OBhect milna vala h",obje);
+            res.render("index",obje);
           }
+        }
+
+        else{
+          console.log("Else part--->>>>>>>")
+          res.redirect("/");
         }
     });
 }
@@ -58,7 +74,7 @@ let  signUpUser = (req, res) => {
         console.log("Phone number does't match with database");
           res.render("LoginPage");
         }
-        //  else if(user.phone==phoneNumber){
+        //  m\u/else if(user.phone==phoneNumber){
         //   if(!req.session.userid)
         //   {
         //     req.session.userid = user._id;
@@ -148,8 +164,6 @@ let check = (req, res) => {
     res.render("LoginPage");
   }
 }
-
-
 
 
 
