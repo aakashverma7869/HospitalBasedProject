@@ -129,7 +129,7 @@ body {
     }
 
     .dropbtn {
-      background-color: #4CAF50;
+     
       color: white;
       /* padding: 16px; */
       font-size: 16px;
@@ -172,7 +172,7 @@ body {
       }
       
       .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+       
       }
 
 

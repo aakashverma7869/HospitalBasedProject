@@ -36,7 +36,7 @@ h3{
 .mid
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: groove
 }
 .down{
@@ -56,4 +56,42 @@ h3{
     grid-template-columns: auto auto auto;
     border-bottom: groove;
     padding-bottom: 2rem;
+}
+
+.container-login{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+
+.container-login .card-box {
+    margin-top: 0rem;
+    margin-left: 9rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.all-ext{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+
+
+
+.time-class {
+ 
+    margin-left: 0rem; 
+
+}
+.alertP >#alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 17rem;
+    float: right;
+    margin-top: 0rem;
 }

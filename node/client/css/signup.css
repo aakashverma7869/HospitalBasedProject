@@ -142,6 +142,26 @@ body {
     margin: 1rem;
   }
   
+  .container-login .card-box form .input-class2 {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+  }
+  .description{
+    margin-left: 1rem;
+  }
+
+  .container-login .card-box form .input-class2 input{
+   width: 42%;
+   padding: 1rem;
+  }
+  
+  .checkbox-class
+  {
+    justify-content: center;
+    margin-left: 11rem;
+  }
   .container-login .card-box form .input-class input {
     width: 100%;
     padding: 1rem;

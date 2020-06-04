@@ -2,6 +2,9 @@
 let _id = null
 
 const User = require("../models/user")
+const Schedule = require("../models/schedule")
+
+
 const Nexmo = require('nexmo');
 //for OTP generator
 const nexmo = new Nexmo({
@@ -12,10 +15,12 @@ const nexmo = new Nexmo({
 
 let indexPage = (req, res) => {
   console.log("Post request for login");
-    const {email,password} = req.body
+    const {email,password} = req.body;
+
     User.findOne({ email }, (err, user) => {
+      console.log("Entry of DB...........")
         if (err || !user) {
-   
+          console.log("invalid login password")
           req.session.loginstatus = "Invalid"
           res.redirect("/");
         }
@@ -48,8 +53,8 @@ let indexPage = (req, res) => {
 
 //for SignUp user
 let  signUpUser = (req, res) => {
-    const userss = new User(req.body);
-    userss.save((err, category) => {
+    const user = new User(req.body);
+    user.save((err, category) => {
       if (err) {
         return res.status(400).json({
           error: "NOT able to save category in DB"
@@ -57,10 +62,57 @@ let  signUpUser = (req, res) => {
       }
       else{
           console.log("Sucessful store in DB",category);
-        res.render("index");
+          if(category.doctorchec=="doctor")
+          {
+            console.log("Yes doctor is ------------->>>>>>>>>>");
+            req.session.userid = user._id;
+            res.render("docSignUp",{"userName": category.name});
+          }
+          else{
+            res.render("index",{"userName": category.name,"userPhone":category.phone,"status":"Successfully"});
+          }
       }
     });
   };
+
+  //for doctor signup
+  let docSignUp = (req,res) =>{
+
+      User.findOneAndUpdate(
+        { _id: req.session.userid},
+        { $set: req.body },
+        { new: true ,useFindAndModify : false},
+      // { name:(name || "").toString() ,
+      //   email:(email || "").toString(),
+      //   state:(state || "").toString(),
+      //   city:(city || "").toString(),
+      //   country:(country || "").toString(),
+      //   date:(date || "").toString(),
+      //   gender:(gender || "").toString(),
+      //   phone:(phone || "").toString()
+      // },
+      (err, output) => {
+        if (err) {
+          console.log("error in updte",err.errmsg);
+        }
+        else{
+          console.log("data updated",output);
+          res.render("index",{"userName": output.name,"userPhone": output.phone, "status":output.status});
+        }
+      }
+    
+    );
+    
+    };
+
+
+
+
+
+
+
+
+
 
 
 //After entering the phone number
@@ -168,9 +220,82 @@ let check = (req, res) => {
 
 
 
+
+
+
+
+let updateUserData = (req, res) => {
+  const {name,email,state,city,country,date,gender,phone} = req.body;
+  console.log("phone is ------->",phone);
+  console.log("type of phone is ------->",typeof(phone));
+  
+  User.findOneAndUpdate(
+    
+    { _id: req.session.userid},
+    { $set: req.body },
+    { new: true ,useFindAndModify : false},
+
+  (err, user) => {
+    if (err) {
+      console.log("error in updte",err.errmsg);
+      res.redirect("editProfile");
+    }
+    else{
+      console.log("data updated",user);
+      const userID = req.session.userid;
+      Schedule.find({ doctorId : userID }, (err, schedule) => {
+        console.log("Entry of DB..........")
+          if (err || !schedule) {
+            console.log("Inside Error->>>>",user);
+            res.render("editProfile",user);
+        }
+        else{
+            console.log(schedule);
+            console.log("user data is --->>>>>>>>>",user);
+            console.log("user schedule is is --->>>>>>>>>",schedule);
+            
+            res.render("editProfile",{schedule:schedule,user:user,"status":"Successfully"});
+        } 
+    });
+
+      // res.render("editProfile",{user:user});
+    }
+  }
+
+);
+
+};
+
+
+
+
+let addschedule = (req,res) =>
+{
+
+  console.log("data value is ---->>>>>>>>>>",req.body);
+  const sche = new Schedule({days: req.body.days , hospital: req.body.hospital ,startTime: req.body.startTime , endTime: req.body.endTime , interval:req.body.interval , doctorId: req.session.userid});
+// console.log("after--->>>>",sche);
+  sche.save((err, category) => {
+    if (err) {
+      return res.status(400).json({
+        error: "NOT able to save category in DB"
+      });
+    }
+    else{
+        console.log("Sucessful store in DB",category);
+    }
+  });
+};
+
+
+
+
 module.exports = {
     indexPage:indexPage,
     signUpUser: signUpUser,
     otp:otp,
-    check:check
+    check:check,
+    updateUserData:updateUserData,
+    docSignUp: docSignUp,
+    addschedule: addschedule
 }

@@ -98,9 +98,16 @@ function ALERTFunction() {
 
 function hidediv()
 {
+    
     document.getElementById("alert").style.visibility="hidden";
+    document.getElementById("alert").style.display="none";
+
+    // document.getElementById("alert").style.display="none";
 }
-setTimeout("hidediv()",3000);
+ setTimeout("hidediv()",3000);
+
+
+
 
 // function showProfile(){
 //     var dropdown = document.querySelector(".nav-user-profile");
@@ -111,6 +118,50 @@ setTimeout("hidediv()",3000);
 //     }
 // }
 
+
+function ScheduleFunction(){
+    document.getElementById("Editpanel").style.display="none";
+    document.getElementById("AddPanel").style.display="block";
+    document.getElementById("AllPanel").style.display="none";
+
+    document.getElementById("pro").style.color= "black";
+    document.getElementById("edi").style.color= "red";
+    document.getElementById("ediA").style.color= "black";
+
+}
+
+function ProfileFunction(){
+    document.getElementById("Editpanel").style.display="block";
+    document.getElementById("AddPanel").style.display="none";
+    document.getElementById("AllPanel").style.display="none";
+    
+    document.getElementById("edi").style.color= "black";
+    document.getElementById("pro").style.color= "red";
+    document.getElementById("ediA").style.color= "black";
+
+}
+function AllSchedule(){
+    document.getElementById("Editpanel").style.display="none";
+    document.getElementById("AddPanel").style.display="none";
+    document.getElementById("AllPanel").style.display="block";
+    document.getElementById("pro").style.color= "black";
+    document.getElementById("edi").style.color= "black";
+    document.getElementById("ediA").style.color= "red";
+
+}
+
+function passwordToggle(){
+    var y = document.getElementById("abc");
+    var x = document.getElementById("myInput");
+    y.classList.toggle("fa-eye");
+    y.classList.toggle("fa-eye-slash");
+    
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+      x.type = "password";
+    }
+}
 
 function work1(id){
     switch (id) {

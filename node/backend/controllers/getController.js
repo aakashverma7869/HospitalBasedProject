@@ -1,5 +1,21 @@
+const User = require("../models/user")
+const Schedule =require("../models/schedule")
+
 let index = (req, res) => {
-    res.render("index");
+    console.log("entry in index function get-->>>");
+    const userID = req.session.userid;
+    console.log("print id--->",userID);
+    User.findOne({ _id : userID }, (err, user) => {
+        console.log("Entry of DB...........")
+          if (err || !user) {
+            console.log("Data not found");
+            res.redirect("/");
+        }
+        else{
+            console.log("print user------->>",user);
+            res.render("index",{"userName": user.name,"userPhone":user.phone,"status":"Successfully"});
+        } 
+    });
 }
 let login = (req, res) => {
     console.log("Login page redirect")
@@ -19,15 +35,53 @@ const logout = (req,res) =>{
     })
   res.redirect("/");
   }
-  let editProfile = (req, res) => {
-    res.render("editProfile");
+let travastraPlus = (req,res) =>{
+    res.render("travastraPlus");
 }
   
+let editProfile = (req, res) => {
+    const userID = req.session.userid;
+    User.findOne({ _id : userID }, (err, user) => {
+        // console.log("Entry of DB...........")
+          if (err || !user) {
+            console.log("Data not found");
+            res.redirect("/");
+        }
+        else{
+            Schedule.find({ doctorId : userID }, (err, schedule) => {
+                console.log("Entry of DB..........")
+                  if (err || !schedule) {
+                    // console.log("Inside Error->>>>",user);
+                    res.render("editProfile",{user:user,"status":"none"});
+                }
+                else{
+                    // console.log(schedule);
+                    // console.log("user data is --->>>>>>>>>",user);
+                    // console.log("user schedule is is --->>>>>>>>>",schedule);
+                    
+                    res.render("editProfile",{schedule:schedule,user:user,"status":"none"});
+                } 
+            });
+
+        } 
+    });
+
+}
+
+
+let AddSchedule = (req, res) =>
+{
+    res.render("AddSchedule")
+}
+
+
 module.exports = {
     index:index,
     login:login,
     signup:signup,
     phonenumber:phonenumber,
     logout:logout,
-    editProfile:editProfile
+    editProfile:editProfile,
+    AddSchedule:AddSchedule,
+    travastraPlus:travastraPlus
 }

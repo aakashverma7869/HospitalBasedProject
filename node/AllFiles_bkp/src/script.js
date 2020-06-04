@@ -96,20 +96,10 @@ function ALERTFunction() {
     alert("Yet this function is NOT Complete (UNDERCONSTRUCTION)!");
   }
 
-function hidediv()
-{
-    document.getElementById("alert").style.visibility="hidden";
-}
-setTimeout("hidediv()",3000);
 
-// function showProfile(){
-//     var dropdown = document.querySelector(".nav-user-profile");
-//     if(dropdown.style.display != "block"){
-//         dropdown.style.display = "block";
-//     }else{
-//         dropdown.style.display = "none";
-//     }
-// }
+
+
+
 
 
 function work1(id){

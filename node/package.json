@@ -4,12 +4,7 @@
   "description": "## This is the wiki file to read about the tasks",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon app",
-    "index": "sass --watch src/client/assets/scss/style.scss src/client/assets/css/style.css & node src/app",
-    "doctor": "sass --watch src/client/assets/scss/newdoctor.scss src/client/assets/css/doctor.css & node src/app",
-    "hospital": "sass --watch src/client/assets/scss/hospital.scss src/client/assets/css/hospital.css & node src/app",
-    "login": "sass --watch src/client/assets/scss/login.scss src/client/assets/css/login.css & node src/app",
-    "signup": "sass --watch src/client/assets/scss/login.scss src/client/assets/css/login.css & node src/app"
+    "test": "nodemon app"
   },
   "repository": {
     "type": "git",
