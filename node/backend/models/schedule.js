@@ -22,10 +22,16 @@ var schedule = new mongoose.Schema(
     interval: {
         type: String,
         maxlength: 32,
-          trim: true
+        trim: true
       },
       doctorId:{
         type: String
+      },
+      subschedule:{
+        type:Array
+      },
+      partion:{
+        
       }  
   },
 

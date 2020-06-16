@@ -19,7 +19,7 @@
     <nav>
     <img class = 'logo' src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="logo">
     <div class = 'nav-classContent'> 
-    <p onclick="window.location.href = 'doctor.html'">Doctor</p>
+      <p onclick="window.location.href = '/doctor'">Doctor</p>
     <p onclick="window.location.href = 'hospital.html'">Hospitals</p>
     <p>Treatment</p>
     <p>Other Services</p>
@@ -59,11 +59,8 @@
 
 
 <form action="/updateUserData" method="POST">
-<div class = "right-section" id= "Editpanel">
-  
-    
-  
 
+<div class = "right-section" id= "Editpanel">
   <div class = "top">
     <h2>Accounts</h2>
   
@@ -227,9 +224,14 @@
     
   <% for(var i=0;i<schedule.length;i++){ %>
     
+  
+
   <div class = "all">
 
+    
   <div class = "left-details">
+  
+  
   <div class = "week">
       <h2><%= schedule[i].days %></h2>
   </div>
@@ -242,35 +244,35 @@
   </div>
   </div>
   
+ 
   </div>
   <div class = "right-details">
       <button onclick="window.location.href='/travastraPlus'" class='button-sche'>Edit Slot</button>
       <button onclick="window.location.href='/travastraPlus'" class='button-sche'>Remove Slot</button>
-      <button onclick="window.location.href='/travastraPlus'" class='button-sche'>View Details</button>
+      <button onclick="AllSubSchedule(this)" class='button-sche' id = "viewDetails">View Details</button>
       <input type="checkbox" id="vehicle1" name="doctorchec" value="doctor">
   </div>
   
 
-  
+
+
+  <div class = "All-slot"  style= "display: none;" id = "AllSlot">
+   
+    <% for(var j=0;j<schedule[i].subschedule.length;j++){ %>
+    <button> <%= schedule[i].subschedule[j][0] %> - <%= schedule[i].subschedule[j][1] %></button>
+
+    <% } %>
   </div>
+ 
+  </div>
+
+ 
   <% } %>
  
 
   <img onclick="ScheduleFunction()" id="edi" src="https://img.icons8.com/fluent/48/000000/add.png"/>
 
-
-
-
-
-
-
-
 </div>
-
-</div>
-
-
-
 
 
 </body>

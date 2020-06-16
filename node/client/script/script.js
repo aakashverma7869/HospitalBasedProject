@@ -107,6 +107,27 @@ function hidediv()
  setTimeout("hidediv()",3000);
 
 
+ function crousalindex(id){
+    // for(var i=0; i<4;i++)
+    // {
+    // document.getElementsByClassName('div-5')[i].style.display='none';
+    // }
+    // var first = document.querySelector(".div-5")[2];
+    // first.style.display = "none";
+    // document.getElementById("crosal1").style.display = "none";
+    // document.getElementById("crosal2").style.display = "flex";
+    switch (id) {
+        case 1:
+            document.getElementById("crosal1").style.display = "none";
+            document.getElementById("crosal2").style.display = "flex";
+            break;
+        case 2:
+            document.getElementById("crosal1").style.display = "flex";
+            document.getElementById("crosal2").style.display = "none";
+            break;
+    }
+
+}
 
 
 // function showProfile(){
@@ -149,6 +170,25 @@ function AllSchedule(){
     document.getElementById("ediA").style.color= "red";
 
 }
+function AllSubSchedule(param){
+   // allclearSchedule(param)
+    parent = param.parentElement.parentElement
+    console.log("paraent is -->",parent);
+    console.log("param is --->",param)
+   var z =  parent.querySelector("#AllSlot");
+   var y = parent.querySelector("#viewDetails");
+   if (z.style.display=="none"){
+    z.style.display = "block";
+
+    y.innerHTML = "Hide Details";
+    }
+    else{
+        z.style.display = "none";
+        y.innerHTML = "View Details";
+    }
+
+}
+
 
 function passwordToggle(){
     var y = document.getElementById("abc");

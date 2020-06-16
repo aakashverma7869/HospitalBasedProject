@@ -73,7 +73,24 @@ let AddSchedule = (req, res) =>
 {
     res.render("AddSchedule")
 }
-
+let doctor = (req, res) =>
+{
+    //res.render("doctor");
+    User.find({ doctorchec : "doctor" }, (err, user) => {
+        console.log("Entry of DB..........")
+          if (err || !user) {
+            console.log("Inside Error->>>>",user);
+            //res.render("editProfile",user);
+        }
+        else{
+            //console.log(schedule);
+            console.log("user data is --->>>>>>>>>",user);
+            //console.log("user schedule is is --->>>>>>>>>",schedule);
+            
+            res.render("doctor",{user:user});
+        } 
+    });
+}
 
 module.exports = {
     index:index,
@@ -83,5 +100,6 @@ module.exports = {
     logout:logout,
     editProfile:editProfile,
     AddSchedule:AddSchedule,
-    travastraPlus:travastraPlus
+    travastraPlus:travastraPlus,
+    doctor:doctor
 }

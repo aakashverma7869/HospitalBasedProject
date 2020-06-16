@@ -1,9 +1,10 @@
 .all{
 /* height : 5rem; */
-display: flex;
+display: grid;
 margin-bottom: 1rem;
 justify-content: space-between;
 background-color:#E8E8E8;
+grid-template-columns: 60% 40%;
 }
 .left-details
 {
@@ -41,4 +42,16 @@ background-color:#E8E8E8;
     font-size: 0.8em;
     background-color: #4797d4;
     border: 2px solid #4797d4;
+}
+.All-slot > button{
+    
+    margin: 0.5rem;
+    height: 40px;
+    width: 100px;
+    border-radius: 3px;
+    color: green;
+    font-size: 0.8em;
+
+    background-color: white;
+    border: 2px solid green;
 }

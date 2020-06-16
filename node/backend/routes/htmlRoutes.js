@@ -14,6 +14,7 @@ router.route("/editProfile").get(getControllers.editProfile);
 router.route("/AddSchedule").get(getControllers.AddSchedule);
 router.route("/travastraPlus").get(getControllers.travastraPlus);
 router.route("/index").get(getControllers.index);
+router.route("/doctor").get(getControllers.doctor);
 
 //POST Controller
 router.route("/indexPage").post(postControllers.indexPage);

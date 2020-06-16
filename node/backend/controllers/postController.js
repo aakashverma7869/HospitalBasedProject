@@ -273,7 +273,59 @@ let addschedule = (req,res) =>
 {
 
   console.log("data value is ---->>>>>>>>>>",req.body);
-  const sche = new Schedule({days: req.body.days , hospital: req.body.hospital ,startTime: req.body.startTime , endTime: req.body.endTime , interval:req.body.interval , doctorId: req.session.userid});
+
+  let startingTime = (req.body.startTime).split(":");
+  let startingdate  = new Date ();
+  startingdate.setHours(Number(startingTime[0]),Number(startingTime[1]),00);
+  
+  
+  let endingTime = (req.body.endTime).split(":");
+  let endingdate  = new Date ();
+  endingdate.setHours(Number(endingTime[0]),Number(endingTime[1]),00);
+
+  let intervalTime = Number(req.body.interval);
+  let subSchedule = [];
+
+// for(let i = startingdate.getTime() ; i<= endingdate.getTime(); i+intervalTime)
+// {
+//   let interval = [];
+//   let newDate = new Date(i);
+
+
+// }
+let startMinute = startingdate.getHours()*60 + startingdate.getMinutes();
+let endingMinute = endingdate.getHours()*60 + endingdate.getMinutes();
+let partion = Math.ceil((endingMinute - startMinute) / intervalTime);
+console.log("partion is ->",partion);
+  for (let i = 0 ; i < partion ; i++)
+  {
+
+    let x = ("0"+startingdate.getHours()).slice(-2)+":"+("0"+startingdate.getMinutes()).slice(-2)
+
+    let a = startingdate.getTime()+intervalTime*60*1000;
+    startingdate = new Date(a);
+    let y = 0 ;
+
+    if(a<=endingdate.getTime())
+    {
+      y = ("0"+startingdate.getHours()).slice(-2)+":"+("0"+startingdate.getMinutes()).slice(-2);  
+    }
+    else{
+      y =  ("0"+endingdate.getHours()).slice(-2)+":"+("0"+endingdate.getMinutes()).slice(-2);  
+    }
+    subSchedule.push([x,y]);
+  }
+
+console.log("before ->>>", subSchedule);
+// let count = 0;
+// for (let i =0 ; i<=subSchedule.length;i++)
+// {
+//   count++;
+// }
+//console.log("count value is --->>",count);
+// console.log("after ->>>", subSchedule[3][1]);
+
+  const sche = new Schedule({days: req.body.days , hospital: req.body.hospital ,startTime: req.body.startTime , endTime: req.body.endTime , interval:req.body.interval , doctorId: req.session.userid, subschedule:subSchedule});
 // console.log("after--->>>>",sche);
   sche.save((err, category) => {
     if (err) {
@@ -285,7 +337,9 @@ let addschedule = (req,res) =>
         console.log("Sucessful store in DB",category);
     }
   });
-};
+
+
+ };
 
 
 

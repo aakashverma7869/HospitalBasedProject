@@ -228,17 +228,20 @@
 
 
             <div class = DoctorClass>
-            
+
+                <% for(var i=0;i<user.length;i++){ %>
+
+
                     <div class="div-5 div-5i">
                         <div class = 'doctor-name'> 
-                            <H3><span class="arrow">___</span> Deep Chandr verma</H3>
+                            <H3><span class="arrow">___</span> <%= user[i].name %></H3>
                         </div>
                             <div class = 'doctor-info'>
-                            <p> <i class="fa fa-certificate"></i>k</p>
-                            <p>   <i class="fas fa-award icon"></i>k</p>
-                            <p> <i class="fa fa-clock" ></i>k year of Experience</p>
+                            <p> <i class="fa fa-certificate"></i><%= user[i].fees %></p>
+                            <p>   <i class="fas fa-award icon"></i><%= user[i].awards %></p>
+                            <p> <i class="fa fa-clock" ></i><%= user[i].experience %> year of Experience</p>
                             <p><i class="fa fa-building"></i></p>
-                            <p><i class="fa fa-map-marker"></i>k</p>
+                            <p><i class="fa fa-map-marker"></i><%= user[i].location %></p>
                         </div>
                         <div class = "button-class">
                             <button>Book an appointment</button>
@@ -247,105 +250,9 @@
                             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="healthcare">
                         </div> 
                     </div>
+     <% } %>
 
-                    <div class="div-5 div-5ii">
-                    
-                            <div class = 'doctor-name'> 
-                                <H3><span class="arrow">___</span> Shubham shinde</H3>
-                            </div>
-
-                    <div class = 'doctor-info'>    
-                        <p> <i class="fa fa-certificate"></i>code</p>
-                        <p> <i class="fas fa-award icon"></i>3 year of experience</p>
-                        <p><i class="fa fa-clock" ></i> </p>
-                        <p><i class="fa fa-building"></i>varanasi</p>
-                        </div>
-                        <div class = "button-class">
-                        <button>Book an appointment</button>
-                        </div>
-                        <div class = 'doctor-img'>
-
-                        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg" alt="healthcare">
-                        </div>
-                    </div>
-                <div class="div-5 div-5iii">
-                    <div class ='doctor-name'>
-                    <H3><span class="arrow">___</span> prakher</H3>
-                    </div>
-                    <div class = 'doctor-info'>
-                    <p> <i class="fa fa-certificate"></i>MBA,MBBS</p>
-                    <p>   <i class="fas fa-award icon"></i>MBA,MBBS</p>
-                    <p><i class="fa fa-clock" ></i>8 year of experience</p>
-                    <p><i class="fa fa-building"></i></p>
-                    <p><i class="fa fa-map-marker"></i>Greater noida</p>
-                    </div>
-                    <div class = "button-class">
-                    <button>Book an appointment</button>
-                    </div>
-                    <div class = 'doctor-img'>
-                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg" alt="healthcare">
-                    </div>
-                </div>
-
-            <div class="div-5 div-5iv">
-            <div class = "doctor-name">
-                <H3><span class="arrow">___</span> Shubham shinde</H3>
-                </div>
-                <div class = 'doctor-info'>
-                <p><i class="fa fa-certificate"></i>fgdfg fgdfg</p>
-                <p>  <i class="fas fa-award icon"></i>5 year of Experience</p>
-                <p><i class="fa fa-clock" ></i> </p>
-                <p><i class="fa fa-building"></i>delhi</p>
-                </div>
-                <div class = "button-class">
-                <button>Book an appointment</button>
-                </div>
-                <div class = 'doctor-img'>
-                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="healthcare">
-                </div>
-            </div>
-
-
-
-            <div class="div-5 div-5v">
-                <div class ="doctor-name">
-                    <H3><span class="arrow">___</span> Shubham shinde</H3>
-                </div>
-                    <div class = 'doctor-info'>
-                    <p> <i class="fa fa-certificate"></i>3554456</p>
-                    <p>  <i class="fas fa-award icon"></i>fthjhhv</p>
-                    <p> <i class="fa fa-clock" ></i>4 year of experience</p>
-                    <p><i class="fa fa-building"></i>nothing</p>
-                    <p><i class="fa fa-map-marker"></i>varani</p>
-                    </div>
-                    <div class = "button-class">
-                    <button>Book an appointment</button>
-                    </div>
-                    <div class = 'doctor-img'>
-                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--006.jpg" alt="healthcare">
-                    </div>
-                </div>
-
-
-                <div class="div-5 div-5vi">
-                    <div class='doctor-name'>
-                    <H3><span class="arrow">___</span> NEERAJ JOSHI</H3>
-                    </div>
-                    <div class = 'doctor-info'>
-                    <p> <i class="fa fa-certificate"></i>dentist</p>
-                    <p>  <i class="fas fa-award icon"></i>md</p>
-                    <p> <i class="fa fa-clock" ></i>20 year of experience</p>
-                    <p><i class="fa fa-building"></i>aims</p>
-                    <p><i class="fa fa-map-marker"></i>new delhi</p>
-                    </div>
-                    <div class = "button-class">
-                    <button>Book an appointment</button>
-                    </div>
-                    <div class = 'doctor-img'>
-                        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg" alt="healthcare">
-                        </div>
-                    </div>
-                
+                  
             </div>
 </div>
 

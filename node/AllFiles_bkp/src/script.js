@@ -97,7 +97,16 @@ function ALERTFunction() {
   }
 
 
-
+function crousalindex(){
+    // for(var i=0; i<4;i++)
+    // {
+    // document.getElementsByClassName('div-5')[i].style.display='none';
+    // }
+    // var first = document.querySelector(".div-5")[2];
+    // first.style.display = "none";
+    document.getElementById("crosal1").style.display = "none";
+    document.getElementById("crosal2").style.display = "flex";
+}
 
 
 
